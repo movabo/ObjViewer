@@ -1,0 +1,203 @@
+# mtl file of Cube 2 level
+
+newmtl slot2
+map_Kd texture//sheik/sheik_cyan.png
+
+newmtl slot3
+map_Kd texture//sheik/sheik_black.png
+
+newmtl slot4
+map_Kd texture//sheik/sheik_pink.png
+
+newmtl slot5
+map_Kd texture//sheik/sheik_white.png
+
+newmtl slot6
+map_Kd texture//sheik/sheik_cream.png
+
+newmtl slot780
+map_Kd texture/inexor/notexture.png
+
+newmtl slot939
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1025
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1026
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1030
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1031
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1032
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1035
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1040
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1041
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1042
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1043
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1046
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1048
+map_Kd texture//sheik/sheik_black.png
+
+newmtl slot1050
+map_Kd texture//sheik/sheik_white.png
+
+newmtl slot1051
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1052
+map_Kd texture//sheik/sheik_cyan.png
+
+newmtl slot1053
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1059
+map_Kd texture//sheik/sheik_cream.png
+
+newmtl slot1060
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1061
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1062
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1063
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1064
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1065
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1070
+map_Kd texture//sheik/sheik_caution.png
+
+newmtl slot1071
+map_Kd texture//sheik/sheik_black.png
+
+newmtl slot1072
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1073
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1074
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1075
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1078
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1083
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1088
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1091
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1092
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1095
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1098
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1099
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1100
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1101
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1102
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1103
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1104
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1105
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1106
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1107
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1110
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1111
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1115
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1116
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1119
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1121
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1124
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1126
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1131
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1136
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1144
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1147
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1151
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1155
+map_Kd texture/inexor/notexture.png
+
+newmtl slot1156
+map_Kd texture/inexor/notexture.png
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>threeObj</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/three.js"></script>
+    <script src="./js/MTLLoader.js"></script>
+    <script src="./js/OBJLoader.js"></script>
+    <script src="./js/PointerLockControls.js"></script>
+    <script src="./js/ObjViewer.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(event) {
+        let byId = (id) => { return document.getElementById(id); },
+            canvas = byId("renderer"),
+            start = byId("start"),
+            overlay = byId("overlay"),
+            help = byId("help"),
+            load = byId("load"),
+            status = byId("status"),
+            statusbar = byId("statusbar"),
+            statustext = byId("statustext");
+
+        // Initialize ObjViewer
+        var objViewer = new ObjViewer(THREE, canvas, {
+          skybox : {
+            path : './assets/skybox/freezurbern/',
+            files : [
+              "divine_ft.png", "divine_bk.png",
+              "divine_up.png", "divine_dn.png",
+              "divine_rt.png", "divine_lf.png"
+            ]
+          },
+          mtl : {
+            path : './assets/',
+            file : "star.mtl"
+          },
+          obj : {
+            path : './assets/',
+            file : "star.obj"
+          }
+        });
+
+        // Log the viewer to the console for debugging.
+        console.log(objViewer);
+
+        // Full size of the canvas
+        objViewer.setSize(window.innerWidth, window.innerHeight);
+
+        // Set the flying-speed.
+        objViewer.floatSpeed = 1040;
+
+        // Load when clicking on the load-button
+        load.addEventListener("click", () => {
+          // (Down-)Load all files.
+          objViewer.load();
+          // Hide button
+          loader.style.display = "none";
+        });
+
+        // update the loading-bar
+        objViewer.callbacks.onXhrProgress = (xhr, action) => {
+          if (xhr.lengthComputable) {
+            let t = xhr.total,
+                l = xhr.loaded,
+                r = Math.round( l / t * 100, 2 ) + "%";
+            statusbar.style.width = r;
+            statustext.innerHTML = "Loading (" + action + "): " + r;
+          }
+        };
+
+        // Show the Start and help when loaded, hide the loading-section
+        objViewer.callbacks.onLoaded = () => {
+          status.style.display = "none";
+          help.style.display = "block";
+
+          // Change the start-point for the viewer
+          objViewer.setPosition(30, 60, 75);
+        };
+
+        // Request the pointer and thus allow the user to move in the canvas
+        start.addEventListener("click", objViewer.requestPointerLock.bind(objViewer));
+
+        // keep full-size on resize
+        window.addEventListener("resize", () => {
+          objViewer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // Pointer is locked: Hide overlay
+        objViewer.callbacks.onPointerLock = () => {
+          overlay.style.display = "none";
+
+          // Start the animation
+          objViewer.animate();
+        };
+
+        // Pointer is unlocked: Show overlay
+        objViewer.callbacks.onPointerUnlock = () => {
+          overlay.style.display = "block";
+
+          // Stop the animation
+          objViewer.stopAnimation();
+        };
+
+      });
+
+    </script>
+  </head>
+  <body>
+    <h1 class="hidden">ObjViewer</h1>
+    <p class="hidden">The library to display obj- and mtl-files to display them including a skybox with WebGL and <a href="https://threejs.org/">three.js</a>.</p>
+    <div id="canvasWrapper">
+      <canvas width="640px" height="480px" id="renderer"></canvas>
+    </div>
+    <div id="overlay">
+      <div id="loader">
+        <button id="load" class="button">Load</button><a href="">View on GitHub</a>
+      </div>
+      <div id="status">
+        <div id="statusbar"></div>
+        <div id="statustext"></div>
+      </div>
+      <div id="help">
+        <button id="start">Click to play</button>
+        (<span class="key">W</span>,
+        <span class="key">A</span>,
+        <span class="key">S</span>,
+        <span class="key">D</span> /
+        <span class="key">&uarr;</span>,
+        <span class="key">&larr;</span>,
+        <span class="key">&darr;</span>,
+        <span class="key">&darr;</span> to move, <span class="key">ESC</span> to exit)
+      </div>
+    </div>
+  </body>
+</html>

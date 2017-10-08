@@ -1,0 +1,114 @@
+*, a:link, a:visited {
+  font-family: sans-serif;
+  color: #333;
+}
+
+body {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.key {
+  padding: 3px;
+  background: #FFF;
+  border: 1px solid #333;
+  border-radius: 3px;
+  min-width: 19px;
+  display: inline-block;
+}
+
+#overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .8);
+}
+
+#load,
+#loader a,
+#start {
+  display: inline-block;
+  background: #FFF;
+  border: 1px solid #333;
+  border-radius: 5px 0 0 5px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  width: calc( 50% - 2px );
+  margin: 0;
+  padding: 0;
+}
+
+#load:active,
+#loader a:active,
+#start:active,
+#load:focus,
+#loader a:focus,
+#start:focus {
+  box-shadow: inset 0 0 5px 0 #666;
+  outline: none;
+}
+
+#loader,
+#help {
+  margin: 100px 5%;
+  width: 90%;
+}
+
+#loader a {
+  height: 48px;
+  border-radius: 0 5px 5px 0;
+  width: calc( 50% - 1px );
+  border-left-width: 0;
+}
+
+#status {
+  top: 100px;
+  position: relative;
+  width: 90%;
+  height: 30px;
+  margin: auto;
+}
+
+#statusbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  background-color: #333;
+}
+
+#statustext {
+  line-height: 30px;
+  text-align: center;
+  postion: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#help {
+  text-align: center;
+  display: none;
+}
+
+#start {
+  border-radius: 5px;
+  width: calc( 100% - 2px );
+  margin-bottom: 10px;
+}
+
+#canvasWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

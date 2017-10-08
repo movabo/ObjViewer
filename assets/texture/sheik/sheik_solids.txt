@@ -1,0 +1,17 @@
+
+Readme for "Solid Textures" by cm|sheik
+
+
+
+The following textures are licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
+sheik_black.png
+sheik_caution.png
+sheik_cream.png
+sheik_cyan.png
+sheik_pink.png
+sheik_white.png
+lava.png
+
+
+For questions, concerns, or to simply give feedback, please email sheik@inexor.org
