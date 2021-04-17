@@ -539,7 +539,8 @@ THREE.MTLLoader.MaterialCreator.prototype = {
 
 		}
 
-		if ( loader.setCrossOrigin ) loader.setCrossOrigin( this.crossOrigin );
+		const crossOrigin = this.__proto__.crossOrigin || this.crossOrigin
+		if ( loader.setCrossOrigin ) loader.setCrossOrigin( crossOrigin );
 		texture = loader.load( url, onLoad, onProgress, onError );
 
 		if ( mapping !== undefined ) texture.mapping = mapping;
