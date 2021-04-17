@@ -180,11 +180,13 @@ class ObjViewer {
    * Initialize the mtl-loader
    *
    * @param  {string} [path=this.files.mtl.path] The base-path to set, where later the files are located.
+   * @param  {string} [path=this.files.mtl.texturePath || this.files.mtl.path] The base-texture path to set, where later the files are located
    * @return {void}
    */
-  initMtl(path = this.files.mtl.path) {
+  initMtl(path = this.files.mtl.path, texturePath = this.files.mtl.texturePath || this.files.mtl.path) {
     this.mtlLoader = new THREE.MTLLoader();
     this.mtlLoader.setPath(path);
+    this.mtlLoader.setTexturePath(texturePath);
   }
 
   /**
